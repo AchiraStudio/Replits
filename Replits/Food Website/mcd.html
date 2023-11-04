@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg'); /* Add the path to your new background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+}
+        header {
+            background-color: #ff9800;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .menu-item {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .menu-item img {
+            max-width: 100%;
+            display: none;
+        }
+    </style>
+    <script>
+        function displayImage(menuItem) {
+            var menuImages = document.querySelectorAll('.menu-item img');
+            for (var i = 0; i < menuImages.length; i++) {
+                menuImages[i].style.display = 'none';
+            }
+            var selectedImage = document.querySelector('#' + menuItem + '-image');
+            if (selectedImage) {
+                selectedImage.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">McDonald's</h1>
+    </header>
+    <div class="content">
+        <h2>Welcome to McDonald's</h2>
+        <p>Discover our wide range of delicious fast-food options.</p>
+        <h2>Menu</h2>
+        <div class="menu-item" onclick="displayImage('big-mac')">
+            Big Mac
+            <img id="big-mac-image" src="images/big_mac.jpg" alt="Big Mac">
+        </div>
+        <div class="menu-item" onclick="displayImage('mcnuggets')">
+            Chicken McNuggets
+            <img id="mcnuggets-image" src="images/chicken_mcnuggets.jpg" alt="Chicken McNuggets">
+        </div>
+        <div class="menu-item" onclick="displayImage('quarter-pounder')">
+            Quarter Pounder
+            <img id="quarter-pounder-image" src="images/quarter_pounder.jpg" alt="Quarter Pounder">
+        </div>
+        <div class="menu-item" onclick="displayImage('fries')">
+            Fries
+            <img id="fries-image" src="images/fries.jpg" alt="Fries">
+        </div>
+        <div class="menu-item" onclick="displayImage('salads')">
+            Salads
+            <img id="salads-image" src="images/salad.jpg" alt="Salads">
+        </div>
+
+        <h2>Contact Us</h2>
+        <p>Visit us at:</p>
+        <p>Jalan Soekarno Hatta, Indonesia</p>
+        <p>Phone: 0877-2901-4951</p>
+    </div>
+</body>
+</html>
