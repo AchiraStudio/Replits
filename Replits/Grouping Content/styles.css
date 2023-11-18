@@ -1,0 +1,27 @@
+.marvel :hover {
+    background-color:maroon;
+    transition: 0.5s;
+}
+
+.marvel {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 10px black;
+    /* animation: test1 infinite ease-in-out 5s; */
+}
+
+/* @keyframes test1 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+        transform: translateX(100px) translateY(75px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+} */
